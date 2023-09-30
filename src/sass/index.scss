@@ -1,0 +1,28 @@
+$title-font-size: xx-large;
+
+:root {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+    transition: background-color 5s ease;
+    height: 100vh;
+    margin: 0;
+
+    &.lightened {
+        background-color: white;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hello-world {
+    font-size: $title-font-size;
+}
+

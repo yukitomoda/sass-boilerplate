@@ -1,0 +1,29 @@
+{
+  "name": "sass-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate project for static website using sass",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:prod",
+    "prebuild:dev": "npm run clean",
+    "build:dev": "webpack --mode=development",
+    "prebuild:prod": "npm run clean",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "dev": "webpack serve --watch-files=src --mode=development",
+    "format": "prettier --write src",
+    "clean": "rm -rf public"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "prettier": "^3.0.3",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

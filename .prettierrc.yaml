@@ -1,0 +1,14 @@
+printWidth: 120
+useTabs: false
+overrides:
+  - files: "*.js"
+    options:
+      singleQuote: true
+      semi: true
+      tabWidth: 2
+  - files: "*.scss"
+    options:
+      tabWidth: 4
+  - files: "*.html"
+    options:
+      tabWidth: 2
