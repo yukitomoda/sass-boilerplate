@@ -1,4 +1,4 @@
-name: build
+name: github-pages 
 
 on:
   push:
@@ -13,8 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with: 
-          fetch-depth: 0
-          ref: 'gh-pages'
+          ref: 'master'
       - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
@@ -24,8 +23,8 @@ jobs:
         run: npm ci
       - name: Git setting
         run: |
-          git config --local user.email "${{ vars.GIT_USER_EMAIL }}"
-          git config --local user.name "${{ vars.GIT_USER_NAME }}"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
       - name: Build
         run: npm run build
       - name: Setup Pages
